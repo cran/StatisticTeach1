@@ -1,32 +1,37 @@
 Type: Package
 Package: StatisticTeach1
-Title: Interactive Tool for Statistics and Probability Teaching
-Version: 0.1.0
+Title: Interactive Tool for Statistics and Probability
+Version: 0.1.1
+Depends: R (>= 4.1.0)
 Authors@R: c(
-    person("Javier", "De La Hoz Maestre", , "jdelahoz@unimagdalena.edu.co", role = c("cre", "aut"),
+    person("Javier", "De La Hoz Maestre",
+           email = "jdelahoz@unimagdalena.edu.co",
+           role = c("cre", "aut"),
            comment = c(ORCID = "0000-0001-7779-0803")),
-    person("Humberto", "Llinas Solano", , "hllinas@uninorte.edu.co", role = "aut",
+    person("Humberto", "Llinas Solano",
+           email = "hllinas@uninorte.edu.co",
+           role = "aut",
            comment = c(ORCID = "0000-0002-5530-6416"))
   )
-Description: A 'shiny' application designed to support the learning of basic
-    concepts in statistics and probability. Provides an interactive interface
-    that allows students to explore and visualize descriptive statistics,
-    frequency tables, and probability distributions intuitively.
+Description: A Shiny application designed to support the learning of basic
+    concepts in statistics and probability. The tool provides an interactive
+    interface that allows students to explore and visualize different
+    statistical concepts intuitively, including descriptive statistics for
+    continuous and qualitative variables, and probability distributions.
 License: GPL-3
 Imports: descriptr, DescTools, dplyr, ggplot2, magrittr, mixdist,
         RColorBrewer, readxl, rlang, shiny, shinyBS, shinydashboard,
-        shinyjs, shinyWidgets, tibble, tidyr, colourpicker
-Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
-VignetteBuilder: knitr
+        shinyjs, shinyWidgets, tibble, tidyr, colourpicker, DT, stats
+Suggests: testthat (>= 3.0.0)
 Encoding: UTF-8
 Config/testthat/edition: 3
 Config/roxygen2/version: 8.0.0
 NeedsCompilation: no
-Packaged: 2026-05-26 23:05:32 UTC; jdelahoz
+Packaged: 2026-05-30 14:09:20 UTC; jdelahoz
 Author: Javier De La Hoz Maestre [cre, aut] (ORCID:
     <https://orcid.org/0000-0001-7779-0803>),
   Humberto Llinas Solano [aut] (ORCID:
     <https://orcid.org/0000-0002-5530-6416>)
 Maintainer: Javier De La Hoz Maestre <jdelahoz@unimagdalena.edu.co>
 Repository: CRAN
-Date/Publication: 2026-05-30 08:20:02 UTC
+Date/Publication: 2026-05-30 14:50:07 UTC

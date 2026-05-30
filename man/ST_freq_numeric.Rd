@@ -2,26 +2,28 @@
 % Please edit documentation in R/ST_freq_numeric.R
 \name{ST_freq_numeric}
 \alias{ST_freq_numeric}
-\title{Frequency table for continuous data
-Frequency table for continuous data.}
+\title{Frequency Table for Continuous Data}
 \usage{
 ST_freq_numeric(data, variable, bins = 5)
 }
 \arguments{
-\item{data}{A \code{data.frame} or a \code{tibble}.}
+\item{data}{A \code{data.frame} or \code{tibble}.}
 
-\item{variable}{Column in \code{data}.}
+\item{variable}{Unquoted name of the numeric column in \code{data}.}
 
-\item{bins}{Number of intervals into which the data must be split.}
+\item{bins}{A positive integer giving the number of intervals into
+which the data range is divided. Defaults to \code{5}.}
 }
 \value{
-A \code{data.frame} with frequency, cumulative frequency, frequency percent and cumulative frequency
-percent.
+A \code{data.frame} with seven columns: \code{lower},
+  \code{upper}, \code{midpoint}, \code{frequency}, \code{cumulative},
+  \code{freq_percent}, and \code{cum_percent}.
 }
 \description{
-Frequency table for continuous data
-Frequency table for continuous data.
+Computes a frequency table for a continuous (numeric) variable by
+dividing the data range into equal-width intervals (bins).
 }
 \examples{
-ST_freq_numeric(mtcars, mpg,bins = 5)
+ST_freq_numeric(mtcars, mpg, bins = 5)
+
 }

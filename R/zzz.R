@@ -1,6 +1,7 @@
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage(
-    "\nTo start the Shiny interface, run:\n",
-    "  runStatisticTeach1()\n"
+    "\nTo start with the Shiny web interface, please run:\n",
+    "  runStatisticTeach1()\n\n",
+    "To cite this package, run: citation('StatisticTeach1')\n"
   )
 }

@@ -2,24 +2,26 @@
 % Please edit documentation in R/ST_freq_factor.R
 \name{ST_freq_factor}
 \alias{ST_freq_factor}
-\title{Frequency table for categorical data
-Frequency table for categorical data.}
+\title{Frequency Table for Categorical Data}
 \usage{
 ST_freq_factor(data, variable)
 }
 \arguments{
-\item{data}{A \code{data.frame} or a \code{tibble}.}
+\item{data}{A \code{data.frame} or \code{tibble}.}
 
-\item{variable}{Column (factor) in \code{data}.}
+\item{variable}{Unquoted name of the column (factor) in \code{data}.}
 }
 \value{
-A \code{data.frame} with frequency, cumulative frequency, frequency percent and cumulative frequency
-percent.
+A \code{data.frame} with five columns: \code{Levels},
+  \code{Frequency}, \code{Cum.Frequency}, \code{Percent}, and
+  \code{Cum.Percent}.
 }
 \description{
-Frequency table for categorical data
-Frequency table for categorical data.
+Computes a frequency table for a categorical (factor) variable,
+including absolute frequency, cumulative frequency, relative frequency
+percentage, and cumulative relative frequency percentage.
 }
 \examples{
-ST_freq_factor(iris,Species)
+ST_freq_factor(iris, Species)
+
 }

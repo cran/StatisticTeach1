@@ -2,37 +2,40 @@
 % Please edit documentation in R/runStatisticTeach1.R
 \name{runStatisticTeach1}
 \alias{runStatisticTeach1}
-\title{Shiny GUI for StatisticTeach1 package}
+\title{Launch the StatisticTeach1 Shiny Application}
 \usage{
-runStatisticTeach1(host = "127.0.0.1", port = NULL, launch.browser = TRUE)
+runStatisticTeach1(
+  host = getOption("shiny.host", "127.0.0.1"),
+  port = NULL,
+  launch.browser = interactive()
+)
 }
 \arguments{
 \item{host}{The IPv4 address that the application should listen on.
-Defaults to the shiny.host option, if set, or "127.0.0.1" if not.}
+Defaults to the \code{shiny.host} option, if set, or
+\code{"127.0.0.1"} otherwise.}
 
-\item{port}{is the TCP port that the application should listen on.
-If the port is not specified,
-and the shiny.port option is set (with options(shiny.port = XX)),
-then that port will be used.
-Otherwise, use a random port.}
+\item{port}{The TCP port that the application should listen on.
+If \code{NULL} (the default) and the \code{shiny.port} option is
+set, that port will be used; otherwise a random available port is
+chosen.}
 
-\item{launch.browser}{If true,
-the system's default web browser will be launched automatically
-after the app is started. Defaults to true in interactive sessions
-only. This value of this parameter can also be a function to call with
-the application's URL.}
+\item{launch.browser}{Logical.  If \code{TRUE} (the default in
+interactive sessions), the system default web browser is opened
+automatically after the app starts.  Can also be a function that
+receives the application URL.}
 }
 \value{
-No return value
+No return value, called for its side effect of launching a
+  Shiny application.
 }
 \description{
-runStatisticTeach1() loads interactive user interface built using R 'shiny'.
-}
-\details{
-The interactive user interface to provide an easy way for to perform descriptive statistical analysis
+Opens the interactive Shiny interface for exploring descriptive
+statistics and probability distributions.
 }
 \examples{
-if(interactive()){
-runStatisticTeach1()
+if (interactive()) {
+  runStatisticTeach1()
 }
+
 }

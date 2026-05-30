@@ -1,14 +1,22 @@
 # StatisticTeach1
 
-An interactive Shiny application for teaching statistics and probability.
+**StatisticTeach1** is an R package that provides an interactive Shiny application for teaching and learning basic concepts in statistics and probability.
+
+## Features
+
+- Descriptive statistics for continuous variables (univariate and bivariate)
+- Descriptive statistics for qualitative variables
+- Multivariate analysis
+- Discrete and continuous probability distributions
+- Load and analyse your own data (CSV or Excel)
 
 ## Installation
 
 ```r
-# From CRAN (once published)
+# Install from CRAN
 install.packages("StatisticTeach1")
 
-# Development version from GitHub
+# Or install the development version from GitHub
 # install.packages("remotes")
 remotes::install_github("JavierDeLaHoz/StatisticTeach1")
 ```
@@ -17,5 +25,15 @@ remotes::install_github("JavierDeLaHoz/StatisticTeach1")
 
 ```r
 library(StatisticTeach1)
+
+# Launch the interactive app
 runStatisticTeach1()
+
+# Standalone frequency table functions
+ST_freq_factor(iris, Species)
+ST_freq_numeric(mtcars, mpg, bins = 5)
 ```
+
+## License
+
+GPL-3
