@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ayuda: Variables Continuas (Bivariadas)</title>
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        h1 { color: #2c3e50; }
+        .latex-block { margin: 1em 0; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+       Continuous Variables (Univariate Analysis)
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            This main module allows you to perform comprehensive descriptive statistics on continuous numerical data. Before exploring the individual summaries, you must first define the variables you want to analyze using the left sidebar panel.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select Your Variable</h3>
+        <ul style="margin-top: 5px;">
+            <li>Use the <strong>Select Quantitative Variable</strong> dropdown menu in the sidebar to choose the continuous variable you wish to analyze from your loaded dataset.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Grouping Data (Optional)</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">If you want to compare statistics across different categories, check the <strong>Statistics by group?</strong> box.</li>
+            <li>Once checked, a new dropdown menu will appear titled <em>Group by</em>. You can select up to a maximum of <strong>two</strong> categorical variables to partition your data.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Navigate the Analysis Tabs</h3>
+        <ul style="margin-top: 5px;">
+            <li>After setting up your variables in the sidebar, use the main panel on the right to navigate between the three analysis tools:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Numerical Summary:</strong> Calculate central tendency, dispersion, shape, and relative positions.</li>
+                    <li><strong>Tabular Summary:</strong> Generate frequency tables using automated binning rules.</li>
+                    <li><strong>Graphic Summary:</strong> Visualize your data with histograms, boxplots, violins, and more.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <hr style="border: 0; height: 1px; background: #cccccc; margin: 20px 0;">
+
+    
+    </div>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+      Graphic Summary Module
+        </h2>
+    
+ 
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Graphic Summary</strong> tab allows you to visualize your data using various statistical plots. Follow these steps to generate, style, and export your charts:
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select Graph Type</h3>
+        <ul style="margin-top: 5px;">
+            <li>Use the <strong>Select</strong> dropdown menu to choose your desired chart: <em>Histogram, Density, Boxplot, Violin, Polygon, or Ogive</em>.</li>
+            <li>Toggle the <strong>Horizontal</strong> switch if you want to flip the plot's orientation.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Customize Your Graph</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">Click the <strong>Customize graph</strong> button (marked with a fish icon) to open the styling panel.</li>
+            <li><strong>Styling Options:</strong> Depending on the graph type and whether your data is grouped, you can adjust:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Structure:</strong> Adjust the number of <em>Bins</em> (for Histograms/Polygons) or toggle specific features like <em>Notch</em> (Boxplots) and <em>Trim</em> (Violin plots).</li>
+                    <li><strong>Aesthetics:</strong> Modify Themes, Fonts, Palettes, Line Widths, and Colors (Fill, Line, Outliers, Points).</li>
+                    <li><strong>Labels:</strong> Rename your axis titles using the <em>xlab</em> and <em>ylab</em> fields.</li>
+                </ul>
+            </li>
+            <li><strong>Reset:</strong> Click the yellow <em>Reset to Initial State</em> button at any time to undo your customizations.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Export & Extras</h3>
+        <ul style="margin-top: 5px;">
+            <li><strong>Download:</strong> Click the blue <strong>Download Graph</strong> button to save your customized visualization to your computer.</li>
+            <li><strong>Outlier Table:</strong> If you are viewing a <em>Boxplot</em>, scroll down to see a detailed data table listing any calculated outliers.</li>
+        </ul>
+    
+    </div>
+
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+        Numerical Summary Module
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Numerical Summary</strong> tab provides instant calculations of key statistical metrics for your dataset. Follow these steps to generate descriptive statistics:
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select the Type of Measure</h3>
+        <ul style="margin-top: 5px;">
+            <li>Use the <strong>Select measures of:</strong> dropdown menu to choose the statistical category you want to analyze:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Central tendency:</strong> Displays metrics such as mean and median.</li>
+                    <li><strong>Dispersion or variability:</strong> Displays metrics such as variance and standard deviation.</li>
+                    <li><strong>Shape:</strong> Displays metrics such as skewness and kurtosis.</li>
+                    <li><strong>Relative position:</strong> Allows you to calculate specific quantiles.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Configure Relative Position (If Applicable)</h3>
+        <ul style="margin-top: 5px;">
+            <li>If you choose <strong>Relative position</strong> from the first menu, a new dropdown will appear asking you to choose either <em>Quartiles</em> or <em>Percentiles</em>:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Quartiles:</strong> A numeric input will appear. Enter the number of quartiles you wish to calculate (between 2 and 10).</li>
+                    <li><strong>Percentiles:</strong> A numeric input will appear. Enter the specific percentile value you want to find (between 1 and 99).</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. View Results</h3>
+        <ul style="margin-top: 5px;">
+            <li>Based on your selections, an interactive data table will automatically generate below the controls, displaying the calculated statistics for your loaded dataset.</li>
+        </ul>
+    
+    </div>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            Tabular Summary Module
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Tabular Summary</strong> tab allows you to easily generate grouped frequency tables for your continuous data. Follow these steps to configure and generate your table:
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select a Binning Rule</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">Use the <strong>Select rule:</strong> dropdown menu to choose the mathematical method for calculating the intervals (classes) of your data.</li>
+            <li>Standard automated rules available are: <em>Sturges, Sqrt (Square Root), Scott,</em> and <em>Freedman–Diaconis</em>.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Set Custom Intervals (Optional)</h3>
+        <ul style="margin-top: 5px;">
+            <li>If you prefer to manually set the number of groups instead of using an automated rule, choose <strong>Number of bin</strong> from the dropdown menu.</li>
+            <li>A slider will appear. Drag the slider to set your exact desired number of intervals (from 4 up to 50).</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Generate the Table</h3>
+        <ul style="margin-top: 5px;">
+            <li>Once you have selected your rule or number of bins, click the <strong>Get table</strong> button.</li>
+            <li>Your formatted frequency table will instantly load in the interactive grid below, displaying intervals, frequencies, and relevant statistical summaries.</li>
+        </ul>
+    
+    </div>
+</body>
+</html>
+

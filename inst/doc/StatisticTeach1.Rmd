@@ -1,0 +1,57 @@
+---
+title: "Getting Started with StatisticTeach1"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting Started with StatisticTeach1}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+**StatisticTeach1** is an interactive Shiny application for teaching and
+learning basic concepts in statistics and probability. It provides visual,
+hands-on exploration of:
+
+- Descriptive statistics for continuous and categorical variables
+- Frequency tables
+- Probability distributions (discrete and continuous)
+
+## Installation
+
+```{r eval=FALSE}
+install.packages("StatisticTeach1")
+```
+
+## Launching the App
+
+```{r eval=FALSE}
+library(StatisticTeach1)
+runStatisticTeach1()
+```
+
+This opens the Shiny interface in your default web browser.
+
+## Standalone Functions
+
+Two utility functions are also available outside the app:
+
+### Frequency table for categorical variables
+
+```{r}
+library(StatisticTeach1)
+ST_freq_factor(iris, Species)
+```
+
+### Frequency table for continuous variables
+
+```{r}
+ST_freq_numeric(mtcars, mpg, bins = 5)
+```

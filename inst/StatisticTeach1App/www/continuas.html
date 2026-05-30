@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Configuración y carga de MathJax para renderizar LaTeX -->
+        <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+          };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+
+<body>
+<div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; background-color: #fcfcfc; border: 1px solid #e0e0e0; border-radius: 8px;">
+
+    <h1 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+        Continuous Distributions
+    </h1>
+
+    <!-- Normal distribution -->
+    <h2 style="color: #00008B; margin-top: 30px;">Normal Distribution</h2>
+    
+    <p><strong>1. Density</strong><br>
+    The density function of the normal distribution with parameters $\mu$ and $\sigma^2$ is given by:</p>
+    <p style="text-align: center;">$$f(x) = \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{(x-\mu)^2} {2 \sigma^2}}, \qquad \text{for all real } x$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a normal distribution with parameters $\mu$ and $\sigma^2$, then:</p>
+    <p style="text-align: center;">$$E(X)=\mu, \qquad V(X)=\sigma^2$$</p>
+
+    <p><strong>4. Standard normal distribution</strong><br>
+    The normal distribution with an expected value of 0 and a variance of 1 is called the <em>standard normal</em>. The associated random variable will be symbolized by $Z$.</p>
+
+    <p><strong>5. $Z$-Formula</strong><br>
+    Let $X$ be a random variable that has a normal distribution with parameters $\mu$ and $\sigma^2$. Then, the following variable has a standard normal distribution:</p>
+    <p style="text-align: center;">$$Z=\frac{X-\mu}{\sigma}$$</p>
+
+    <p><strong>6. Standardization to $Z$</strong><br>
+    Let $X$ be a random variable that has a normal distribution with parameters $\mu$ and $\sigma^2$. Then, for any real number $t$, the following holds:</p>
+    <p style="text-align: center;">$$P(X \leq t) = P\left(Z \leq \frac{t-\mu}{\sigma}\right)$$</p>
+
+    <p><strong>7. Quantile</strong><br>
+    Suppose that $X$ has a normal distribution with mean $\mu$ and standard deviation $\sigma$. For $0 < \alpha < 1$, the symbol $x_\alpha$ is a <em>quantile value</em> of the normal distribution if it satisfies the condition:</p>
+    <p style="text-align: center;">$$P(X \geq x_\alpha) = \alpha$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Student's t-distribution -->
+    <h2 style="color: #00008B;">Student's $t$-Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    Let $n$ be a natural number. A random variable $X$ has a $t$-distribution with $n$ degrees of freedom when it has the probability density:</p>
+    <p style="text-align: center;">$$f(x)= \frac{\Gamma \left(\frac{n+ 1}{2}\right)}{\sqrt{\pi n}\; \Gamma \left(\frac{n}{2}\right)\, \left(1 + \frac{x^2}{n}\right)^{\frac{n +1}{2}}}, \quad x\in \mathbb{R}$$</p>
+    <p style="text-align: justify;">The density of the $t$-distribution with $n$ degrees of freedom is an even function, whose graphical representation does not differ much from the normal density for large $n$. For $n=1$, the Cauchy density is obtained as a special case.</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a Student's $t$-distribution with $n$ degrees of freedom, then:</p>
+    <p style="text-align: center;">$$E(X)=0, \qquad V(X)=\frac{n}{n-2}, \quad n\geq 3$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Chi-squared distribution -->
+    <h2 style="color: #00008B;">Chi-squared Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    Let $n$ be a natural number. A random variable $X$ has a $\chi^2$ (chi-squared) distribution with $n$ degrees of freedom when it has the probability density:</p>
+    <p style="text-align: center;">$$f(x)=\begin{cases} 0 & \text{for } x\leq 0 \\ \frac{1}{2^{n/2}\Gamma\left(\frac{n}{2}\right)} x^{\frac{n}{2}-1} e^{-\frac{x}{2}} & \text{for } x>0 \end{cases}$$</p>
+    <p style="text-align: justify;">For the case $n=2$, the special case is obtained where the $\chi^2$ distribution is the exponential distribution with parameter $\beta=\frac{1}{2}$. Furthermore, comparing them, we obtain that:</p>
+    <p style="text-align: center;">$$\chi^2(n) = \gamma\left(\frac{n}{2}, \frac{1}{2}\right)$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a chi-squared distribution with $n$ degrees of freedom, then:</p>
+    <p style="text-align: center;">$$E(X)=n, \qquad V(X)=2n$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Fisher's F-distribution -->
+    <h2 style="color: #00008B;">Fisher's $F$-Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    Let $n$ and $m$ be natural numbers. A random variable $X$ has a Fisher's $F$-distribution with $n$ and $m$ degrees of freedom when it has the probability density:</p>
+    <p style="text-align: center;">$$f(x)= \begin{cases} 0 & \text{for } x\leq 0 \\ \frac{\Gamma \left(\frac{n+ m}{2}\right)\,n^{n/2}\, m^{m/2}}{\Gamma\left(\frac{n}{2}\right)\, \Gamma\left(\frac{m}{2}\right)}\, \frac{x^{\frac{m}{2}-1}}{(n+mx)^{(n+m)/2}} & \text{for } x>0 \end{cases}$$</p>
+    <p style="text-align: justify;">Fisher's $F$-distribution, like the chi-squared, has an asymmetric density function, defined only for non-negative values.</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a Fisher's $F$-distribution, then:</p>
+    <p style="text-align: center;">$$E(X)=\frac{n}{n-2}, \quad n\geq 3$$</p>
+    <p style="text-align: center;">$$V(X)=\frac{2n^2(m+n-2)}{m(n-2)^2(n-4)}, \quad n\geq 5$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Exponential distribution -->
+    <h2 style="color: #00008B;">Exponential Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    A random variable $X$ has an exponential distribution if for all $\beta>0$ its density is:</p>
+    <p style="text-align: center;">$$f(x;\beta)= \begin{cases} 0 & \text{for } x\leq 0 \\ \beta e^{-\beta x} & \text{for } x>0 \end{cases}$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+    <p>In this case, it has the form:</p>
+    <p style="text-align: center;">$$F(t)=\begin{cases} 0 & \text{for } t\leq 0 \\ 1- e^{-\beta t} & \text{for } t>0 \end{cases}$$</p>
+
+    <p><strong>3. Expected value and variance</strong></p>
+    <p style="text-align: center;">$$E(X)=\frac{1}{\beta}, \qquad V(X)=\frac{1}{\beta^2}$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Logistic distribution -->
+    <h2 style="color: #00008B;">Logistic Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    The density function of the logistic distribution with parameters $\mu$ and $\sigma^2$ is given by:</p>
+    <p style="text-align: center;">$$f(x) = \frac{e^{-(x-\mu)^2/\sigma^2}}{\sigma^2 (1 + e^{-(x-\mu)^2/\sigma^2})^2}$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+    <p>In this case, it has the form:</p>
+    <p style="text-align: center;">$$F(t) = \frac{1}{1 + e^{-(t-\mu)^2/\sigma^2}}$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a logistic distribution, then:</p>
+    <p style="text-align: center;">$$E(X)=\mu, \qquad V(X)=\frac{\pi^2\,\sigma^2}{3}$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Log-normal distribution -->
+    <h2 style="color: #00008B;">Log-normal Distribution</h2>
+
+    <p style="text-align: justify;">The log-normal distribution in its simplest form can be defined as the distribution of a random variable whose logarithm obeys the normal probability density. Let $Y$ be a random variable that is normally distributed with parameters $\mu$ and $\sigma^2$. If $Y=\ln X$ or $X=e^Y$, then $X$ is said to have a log-normal distribution.</p>
+
+    <p><strong>1. Density</strong><br>
+    A random variable $X$ has a log-normal distribution with parameters $\mu$ and $\sigma^2>0$ if its probability density is given by:</p>
+    <p style="text-align: center;">$$f(x)= \begin{cases} \frac{1}{x\sqrt{\sigma^2\,\pi}}\exp\left\{-\frac{1}{2\sigma^2}(\ln x - \mu)^2 \right\} & \text{if } x>0 \\ 0 & \text{otherwise} \end{cases}$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a log-normal distribution, then:</p>
+    <p style="text-align: center;">$$E(X)=\exp\left\{\mu + \frac{\sigma^2}{2}\right\}, \qquad V(X)=\left[\exp\{\sigma^2\}-1\right]\; \exp\left\{2\mu +\sigma^2\right\}$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Gamma distribution -->
+    <h2 style="color: #00008B;">Gamma Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    A random variable $X$ has a gamma distribution with parameters $\alpha, \beta$ if its density is:</p>
+    <p style="text-align: center;">$$f(x;\alpha,\beta) = \begin{cases} 0 & \text{for } x\leq 0, \\ \frac{\beta^\alpha}{\Gamma(\alpha)}\, x^{\alpha-1}\, e^{-\beta x} & \text{for } x>0, \end{cases}$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong></p>
+    <p style="text-align: center;">$$E(X)=\frac{\alpha}{\beta}, \qquad V(X)=\frac{\alpha}{\beta^2}$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Weibull distribution -->
+    <h2 style="color: #00008B;">Weibull Distribution</h2>
+
+    <p><strong>1. Density</strong><br>
+    A random variable $X$ has a Weibull distribution with parameters $\alpha, \beta>0$ if its probability density is given by:</p>
+    <p style="text-align: center;">$$f(x)= \begin{cases} \beta\alpha \left(x \beta\right)^{\alpha-1} \exp\left\{- [x\beta]^{\alpha}\right\} & \text{if } x>0 \\ 0 & \text{otherwise} \end{cases}$$</p>
+    <p style="text-align: justify;">The parameters $\alpha$ and $\beta$, which completely describe the Weibull density, are of great importance. Here $\alpha$ is a shape parameter and $\beta$ is a scale parameter.</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+    <p>The corresponding distribution function is given by:</p>
+    <p style="text-align: center;">$$F(t)=\begin{cases} 0 & \text{if } t\leq 0 \\ 1- \exp\left\{- (\beta t)^{\alpha}\right\} & \text{if } t>0 \end{cases}$$</p>
+
+    <p><strong>3. Expected value and variance</strong></p>
+    <p style="text-align: center;">$$E(X)=\frac{1}{\beta}\, \Gamma\left(1+\frac{1}{\alpha}\right)$$</p>
+    <p style="text-align: center;">$$V(X)=\frac{1}{\beta^2}\, \left[\Gamma\left(1+\frac{2}{\alpha}\right) - \Gamma^2\left(1+\frac{1}{\alpha}\right)\right]$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Beta distribution -->
+    <h2 style="color: #00008B;">Beta Distribution</h2>
+
+    <p style="text-align: justify;">For $x, y >0$, the integral:</p>
+    <p style="text-align: center;">$$B(x,y) = \int_0^1 t^{x-1} (1-t)^{y-1} dt$$</p>
+    <p style="text-align: justify;">exists as an absolutely convergent improper Riemann integral, and therefore, also as a Lebesgue integral. The function $B: (0,\infty)^2\to \mathbb{R}$ is called the Euler beta function.</p>
+
+    <p><strong>1. Density</strong><br>
+    A random variable $X$ has a beta distribution if:</p>
+    <p style="text-align: center;">$$f(x)=\begin{cases} \frac{1}{B(\alpha, \beta)}\, x^{\alpha-1}\,(1-x)^{\beta-1} & \text{for } 0<x<1 \text{ and } \alpha,\beta>0 \\ 0 & \text{for } x\leq 0 \text{ and } x\geq 1 \end{cases}$$</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ has a beta distribution, then:</p>
+    <p style="text-align: center;">$$E(X)=\frac{\alpha}{\alpha + \beta}$$</p>
+    <p style="text-align: center;">$$V(X)=\frac{\alpha \beta}{(\alpha +\beta)^2 \,(\alpha +\beta +1)}$$</p>
+
+    <p><strong>4. Properties</strong><br>
+    Some special cases of the beta distribution are:</p>
+    <ul style="margin-top: 5px;">
+        <li style="margin-bottom: 10px;"><strong>Property 1.</strong> When $\alpha=\beta=1$ we have the rectangular distribution $f(x)=1$ if $x\in[0,1]$ and $f(x)=0$ otherwise.</li>
+        <li><strong>Property 2.</strong> When $\alpha=1$, $\beta=2$ and $\alpha=2$, $\beta=1$ we have the rectangular distributions respectively:
+            <p style="text-align: center;">$$f(x)=\begin{cases} 2(1-x) & \text{if } 0\leq x\leq 1 \\ 0 & \text{otherwise} \end{cases} \qquad f(x)=\begin{cases} 2x & \text{if } 0\leq x\leq 1 \\ 0 & \text{otherwise} \end{cases}$$</p>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>

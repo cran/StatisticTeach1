@@ -1,0 +1,417 @@
+---
+title: "DISTRIBUCIONES CONINUAS"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(StatisticTeach1)
+```
+
+# Distribución normal
+
+**1. Densidad**
+
+La función de densidad de la distribución $t$ de Student con parámetros $\mu$ y $\sigma^2$ está dada por:
+
+$$f(x)\;= \; \frac{1}{\sqrt{2 \pi \sigma^2}} \, e^{-\frac{(x-\mu)^2} {2 \sigma^2}}, \qquad \text{para todo $x$ real}$$
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=\mu, \qquad  V(X)=\sigma^2$$
+
+
+**4. Distribución normal estándar**
+
+Aquella distribución normal con esperanza 0 y varianza 1 se llama *normal estándar*. La variable aleatoria asociada se simbolizará con $Z$.
+
+
+**5. Fórmula $Z$**
+
+Sea $X$  una variable aleatoria que tiene distribución normal con parámetros $\mu$ y $\sigma^2$. Entonces, la siguiente variable tiene distribución normal estándar: 
+
+$$Z=\frac{X-\mu}{\sigma}$$
+
+
+
+**6. Estandarización a $Z$**
+
+Sea $X$  una variable aleatoria que tiene distribución normal con parámetros $\mu$ y $\sigma^2$. Entonces, para todo número real $t$, se cumple que:
+
+
+$$P(X \leq t)  \;=\;  P\Big(Z \leq \frac{t-\mu}{\sigma}\Big)$$
+
+
+
+**7. Cuantil**
+
+Supongamos que $X$ tiene distribución normal con media $\mu$ y desviación estándar $\sigma$. Para $0 < \alpha < 1$, el símbolo  $x_\alpha$ es un *valor cuantil* de la distribución normal si cumple con la condición:
+$$P(X \geq x_\alpha) \;= \; \alpha$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución $t$ de Student
+
+**1. Densidad**
+
+Sea $n$ un número natural. Una variable aleatoria $X$ tiene
+ distribución
+$t$ con $n$ grados de libertad  cuando tiene densidad de
+probabilidad
+$$f(x)= \mbox{$\frac{\Gamma \big(\frac{n+ 1}{2}\big)}{\sqrt{\pi n}\; \Gamma
+\big({\frac{n}{2}\big)\, \big(1 + \frac{x^2}{n}\big)^{\frac{n
++1}{2}}}}$}, \quad x\in R$$
+
+
+La densidad de la distribución $t$ con
+$n$ grados de libertad es una función par, cuya representación
+gráfica no se diferencia mucho de la densidad normal para $n$
+grande. Para $n=1$ se obtiene como caso especial la densidad de
+Cauchy.
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=0, \qquad  V(X)=\frac{n}{n-2}, \quad n\geq 3$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución chi-cuadrada
+
+**1. Densidad**
+
+Sea $n$ un número natural. Una variable aleatoria $X$ tiene
+ distribución
+$\chi^2$ (chi-cuadrada) con $n$ grados de libertad cuando tiene
+densidad de probabilidad
+$$f(x)=\begin{cases}
+    0 & \text{para $x\leq 0$} \\
+    \mbox{$\frac{1}{2^{n/2}\Gamma\big(\frac{n}{2}\big)}$} x^{\frac{n}{2}-1}
+    e^{-\frac{x}{2}}& \text{para $x>0$}
+  \end{cases}$$
+
+\noindent Para el caso $n=2$ se obtiene el caso especial que la
+distribución $\chi^2$ es la distribución exponencial con
+parámetro $\beta=\frac{1}{2}$. Inclusive, comparando, obtenemos
+que
+\begin{equation} \label{ec-Bassler-10.22c}
+ \chi^2(n) = \gamma\big(\mbox{$\frac{n}{2}, \frac{1}{2}$}\big), \quad
+ \forall 
+\end{equation}
+
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=n, \qquad  V(X)=2n$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución $F$ de Fisher
+
+**1. Densidad**
+
+Sean $n$ y $m$ números naturales. Una variable aleatoria $X$
+ distribución $F$ de Fisher
+con $n$ $m$ grados de libertad}  cuando tiene densidad de
+probabilidad
+$$f(x)= \begin{cases}
+    0 & \text{para $x\leq 0$} \\
+    \mbox{$\frac{\Gamma \big(\frac{n+ m}{2}\big)\,n^{n/2}\,
+    m^{m/2}}{\Gamma\big(\frac{n}{2}\big)\,
+    \Gamma\big(\frac{m}{2}\big)}\, \frac{x^{\frac{m}{2}-1}}{(n+mx)^{(n+m)/2}}$}
+    & \text{para $x>0$}
+  \end{cases}$$
+  
+  
+La distribución $F$ de Fisher, al igual que la
+chi-cuadrada, tiene una función de densidad asimétrica,
+definida solo para valores no negativos.
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=\frac{n}{n-2}, \quad n\geq 3$$
+$$V(X)=\frac{2n^2(m+n-2)}{m(n-2)^2(n-4)}, \quad n\geq 5$$
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución exponencial
+
+
+**1. Densidad**
+
+Una variable aleatoria $X$ tiene
+distribución
+exponencial si para todo $\beta>0$ su densidad es
+$$ f(x):=f(x; \beta)=  \begin{cases}
+    0 & \text{para $x\leq 0$} \\
+    \beta e^{-\beta x} & \text{para $x>0$}
+  \end{cases}$$
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+En este caso, tiene la forma: 
+$$ F(t):=\begin{cases}
+    0 & \text{para $t\leq 0$} \\
+    1- e^{-\beta t} & \text{para $t>0$}
+  \end{cases}$$
+
+**3. Esperanza y varianza**
+
+$$E(X)=\frac{1}{\beta}, \qquad  V(X)=\frac{1}{\beta^2}$$
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución logística
+
+**1. Densidad**
+
+La función de densidad de la distribución logística con parámetros $\mu$ y $\sigma^2$ está dada por:
+
+ 
+
+$$f(x)\;= \; \frac{e^{-(x-\mu)^2/\sigma^2}}{\sigma^2 (1 + e^{-(x-\mu)^2/\sigma^2})^2}$$
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+En este caso, tiene la forma
+$$F(t) \; = \; \frac{1}{1 + e^{-(x-\mu)^2/\sigma^2}}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=\mu, \qquad  V(X)=\frac{\pi^2\,\sigma^2}{3}$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución log-normal
+
+La distribución log-normal en su forma más simple puede
+ser definida como la distribución  de una variable aleatoria
+cuyo logaritmo obedece a  la densidad de probabilidad normal. Sea
+$Y$ una variable aleatoria que está normalmente distribuida con
+parámetros $\mu$ y $\sigma^2$. Si $Y=\ln X$ o $X=e^Y$, entonces
+se dice que $X$  tiene distribución log-normal.
+
+
+**1. Densidad**
+
+Una variable aleatoria $X$ tiene
+ distribución
+log-normal con parámetros $\mu$ y $\sigma^2>0$  si su
+densidad de probabilidad está dada por
+$$f(x)= \begin{cases}
+    \frac{1}{x\sqrt{\sigma^2\,\pi}}\exp\big\{-\frac{1}{2\sigma^2}(\ln x - \mu)^2
+    \big\} & \text{si $x>0$} \\
+    0 & \text{de otro modo}
+  \end{cases}$$
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=\exp\left\{\mu + \frac{\sigma^2}{2}\right\}, \qquad  V(X)=[\exp\left\{\sigma^2\right\}-1]\; \exp\left\{2\mu +\sigma^2\right\}$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución gamma
+
+
+**1. Densidad**
+
+Una variable aleatoria $X$ tiene 
+distribución gamma con parámetros $\alpha, \beta$ si su densidad es
+
+$$f(x):=f(x;\alpha,\beta) = \begin{cases}
+    0 & \text{para $x\leq 0$}, \\
+    \frac{\beta^\alpha}{\Gamma(\alpha)}\, x^{\alpha-1}\, e^{-\beta x}& \text{para $x>0$},
+  \end{cases}$$
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+ 
+$$E(X)=\frac{\alpha}{\beta}, \qquad  V(X)=\frac{\alpha}{\beta^2}$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución weibull
+
+**1. Densidad**
+
+Una variable aleatoria $X$ tiene  con parámetros
+$\alpha, \beta>0$  si su densidad de probabilidad está
+dada por
+$$f(x)= \begin{cases}
+    \beta\alpha \left(x \beta\right)^{\alpha-1} \exp\big\{-
+    [x\beta]^{\alpha}\big\} & \text{si $x>0$} \\
+    0 & \text{de otro modo}
+  \end{cases}$$
+  
+  Los tres parámetros, $\alpha$ y $\beta$, que
+describen completamente a la densidad de Weibull son de mucha
+importancia. Aquí $\alpha$ es un parámetro de forma y
+$\beta$ es un parámetro de escala. 
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+La función de distribución correspondiente está dada por
+$$F(t)=\begin{cases}
+    0  & \text{si $t\leq 0$} \\
+    1- \exp\big\{- (\beta t)^{\alpha}\big\} & \text{si $t>0$}
+  \end{cases}$$
+
+
+**3. Esperanza y varianza**
+
+$$E(X)=\frac{1}{\beta}\, \Gamma\left(1+\frac{1}{\alpha}\right)$$
+$$  V(X)=\frac{1}{\beta^2}\, \left[\Gamma\left(1+\frac{2}{\alpha}\right) - \Gamma^2\left(1+\frac{1}{\alpha}\right)\right]$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# Distribución beta
+
+Para $x, y >0$, la integral
+\begin{equation} 
+B(x,y):=\int_0^1 t^{x-1} (1-t)^{y-1} dt
+\end{equation}
+
+\noindent existe como integral de Riemann indeterminada
+absolutamente convergente, por tanto, también como integral de
+Lebesgue. La función $B: (0,\infty)^2\to R$ se llama
+función beta de Euler.
+
+
+**1. Densidad**
+
+Una variable aleatoria $X$ tiene  distribución beta  si
+$$f(x)=\begin{cases}
+    \frac{1}{B(\alpha, \beta)}\, x^{\alpha-1}\,(1-x)^{\beta-1} &
+    \text{para $0<x<1$ y $\alpha,\beta>0$} \\
+    0 & \text{para $x\leq 0$ y $x\geq 1$}
+  \end{cases}$$
+
+**2. Función de distribución acumulada**
+
+Se simboliza por $F$ y se define como:
+
+$$F(t) \; = \;  P(X \leq t) = \int\limits_{-\infty}^t f(x) dx, \qquad \text{para todo $t$ real}$$
+
+
+**3. Esperanza y varianza**
+
+Si $X$ es normal con parámetros $\mu$ y $\sigma^2$, entonces, 
+$$E(X)=\frac{\alpha}{\alpha + \beta}$$
+$$  V(X)=\frac{\alpha \beta}{(\alpha +\beta)^2 \,(\alpha +\beta +1)}$$
+
+
+**4. Propiedades**
+
+Algunos
+caso especiales de la distribución beta  son:
+
+*Propiedad 1. *
+
+Cuando
+$\alpha=\beta=1$ tenemos la distribución rectangular $f(x)=1$ si
+$x\in[0,1]$ y $f(x)=0$ de otro modo.
+
+*Propiedad 2. *
+
+Cuando $\alpha=1$,
+$\beta=2$ y $\alpha=2$, $\beta=1$ tenemos las distribuciones
+rectangulares
+$$f(x)=\begin{cases}
+    2(1-x) & \text{si $0\leq x\leq 1$} \\
+    0 & \text{de otro modo}
+  \end{cases} \qquad  f(x)=\begin{cases}
+    2x & \text{si $0\leq x\leq 1$} \\
+    0 & \text{de otro modo}
+  \end{cases}$$
+
+ respectivamente.
+

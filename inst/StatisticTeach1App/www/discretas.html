@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Configuración y carga de MathJax para renderizar LaTeX -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; background-color: #fcfcfc; border: 1px solid #e0e0e0; border-radius: 8px;">
+
+    <h1 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+        Discrete Distributions
+    </h1>
+
+    <!-- Binomial distribution -->
+    <h2 style="color: #00008B; margin-top: 30px;">Binomial Distribution</h2>
+    
+    <p><strong>1. Bernoulli experiment</strong><br>
+    It has only two possible outcomes: <em>success</em> and <em>failure</em>. A success occurs with probability $p$, where $0<p<1$.</p>
+
+    <p><strong>2. Binomial experiment</strong><br>
+    It is a Bernoulli experiment that is performed $n$ times, such that the different executions are performed independently of each other and with the same probability $p$.</p>
+
+    <p><strong>3. Probability function</strong><br>
+    If a Bernoulli experiment with probability of success $p$ is performed $n$ times, and if $X$ denotes the total number of successes obtained, then the probability function of the binomial distribution with parameters $n$ and $p$ is given by:</p>
+    <p style="text-align: center;">$$f(k) = P(X=k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k=0,1,2, \dots, n$$</p>
+
+    <p><strong>4. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \sum_{k\leq t} f(k), \quad \text{for all real } t$$</p>
+
+    <p><strong>5. Expected value and variance</strong><br>
+    If $X$ is binomial with parameters $n$ and $p$, then:</p>
+    <p style="text-align: center;">$$E(X)=np, \qquad V(X)= np(1-p)$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Poisson distribution -->
+    <h2 style="color: #00008B;">Poisson Distribution</h2>
+
+    <p><strong>1. Probability function</strong><br>
+    Let $X$ be the number of events occurring in a time interval $[0,t]$. The probability function of the Poisson distribution with parameter $\lambda >0$ is given by:</p>
+    <p style="text-align: center;">$$f(k) = P(X=k) = \frac{1}{k!} e^{-\lambda} \lambda^k, \quad k=0,1,2, 3, \dots$$</p>
+    <p>where $e$ is the base of the natural logarithm.</p>
+
+    <p><strong>2. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \sum_{k\leq t} f(k), \quad \text{for all real } t$$</p>
+
+    <p><strong>3. Expected value and variance</strong><br>
+    If $X$ is Poisson with parameter $\lambda$, then:</p>
+    <p style="text-align: center;">$$E(X)= V(X)= \lambda$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Hypergeometric distribution -->
+    <h2 style="color: #00008B;">Hypergeometric Distribution</h2>
+
+    <p><strong>1. Hypergeometric experiment</strong><br>
+    In general, a hypergeometric experiment with parameters $n$, $M$, and $N$ is based on the following assumptions:</p>
+    <ul style="margin-top: 5px;">
+        <li style="margin-bottom: 5px;">The population or set to be sampled is a finite population with $N$ elements.</li>
+        <li style="margin-bottom: 5px;">Each element of the population can be characterized as a success or a failure.</li>
+        <li style="margin-bottom: 5px;">There are $M$ successes in the population.</li>
+        <li>A sample of $n$ individuals is chosen without replacement, such that every subset of size $n$ is equally likely to be selected.</li>
+    </ul>
+
+    <p><strong>2. Probability function</strong><br>
+    Let $X$ be the number of successes obtained in a randomly chosen sample when performing a hypergeometric experiment with parameters $n$, $M$, and $N$. Then, the probability of choosing exactly $k$ successes in $n$ trials is given by:</p>
+    <p style="text-align: center;">$$f(k) = P(X=k) = \frac{\binom{M}{k}\binom{N-M}{n-k}}{\binom{N}{n}}, \quad \text{where} \quad k=0,1,2, \dots, n \quad \text{and} \quad n\leq N$$</p>
+    <p style="text-align: justify;">The corresponding distribution of $X$ is known as the hypergeometric distribution with parameters $n$, $M$, and $N$.</p>
+
+    <p><strong>3. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \sum_{k\leq t} f(k), \quad \text{for all real } t$$</p>
+
+    <p><strong>4. Expected value and variance</strong></p>
+    <p style="text-align: center;">$$E(X) = n\cdot\frac{M}{N} \qquad \text{and} \qquad V(X) = n \cdot\frac{M}{N} \cdot \left(1-\frac{M}{N}\right)\cdot \left(\frac{N-n}{N-1}\right)$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Negative binomial distribution -->
+    <h2 style="color: #00008B;">Negative Binomial Distribution</h2>
+
+    <p><strong>1. Negative binomial experiment</strong><br>
+    A negative binomial experiment with parameters $r$ and $p$ is characterized by the following conditions:</p>
+    <ul style="margin-top: 5px;">
+        <li style="margin-bottom: 5px;">The experiment consists of a series of Bernoulli experiments that are independent of each other.</li>
+        <li style="margin-bottom: 5px;">The probability of success $p$ for each Bernoulli experiment is always the same.</li>
+        <li>The experiment continues until a total of $r$ successes have been observed, where $r$ is a given non-negative integer.</li>
+    </ul>
+
+    <p><strong>2. Probability function</strong><br>
+    Let $X$ be the number of failures preceding the $r$-th success in a negative binomial experiment with parameters $r$ and $p$. Then, the probability that there are $k$ failures before the $r$-th success is given by:</p>
+    <p style="text-align: center;">$$f(k) = P(X=k) = \binom{k+r-1}{r-1} p^r (1-p)^k, \qquad k=0,1,2, \dots$$</p>
+    <p style="text-align: justify;">The corresponding distribution of $X$ is known as the negative binomial distribution with parameters $r$ and $p$.</p>
+
+    <p><strong>3. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \sum_{k\leq t} f(k), \quad \text{for all real } t$$</p>
+
+    <p><strong>4. Expected value and variance</strong></p>
+    <p style="text-align: center;">$$E(X) = \frac{r(1-p)}{p} \qquad \text{and} \qquad V(X) = \frac{r(1-p)}{p^2}$$</p>
+
+    <hr style="border: 0; height: 1px; background: #cccccc; margin: 30px 0;">
+
+    <!-- Geometric distribution -->
+    <h2 style="color: #00008B;">Geometric Distribution</h2>
+
+    <p><strong>1. Special case</strong><br>
+    It is a special case of the negative binomial distribution with parameters $r=1$ and $p$.</p>
+
+    <p><strong>2. Probability function</strong><br>
+    Let $X$ be the number of failures preceding the first success in a negative binomial experiment with parameters 1 and $p$. Then, the probability that there are $k$ failures before the first success is given by:</p>
+    <p style="text-align: center;">$$f(k) = P(X=k) = p (1-p)^k, \qquad k=0,1,2, \dots$$</p>
+    <p style="text-align: justify;">The corresponding distribution of $X$ is known as the geometric distribution with parameter $p$.</p>
+
+    <p><strong>3. Cumulative distribution function</strong><br>
+    It is symbolized by $F$ and is defined as:</p>
+    <p style="text-align: center;">$$F(t) = P(X \leq t) = \sum_{k\leq t} f(k), \quad \text{for all real } t$$</p>
+
+    <p><strong>4. Expected value and variance</strong></p>
+    <p style="text-align: center;">$$E(X)=\frac{1-p}{p}, \qquad V(X)=\frac{1-p}{p^2}$$</p>
+
+</div>
+</body>
+</html>

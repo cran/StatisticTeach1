@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Auda: Variables Continuas (Bivariadas)</title>
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        h1 { color: #2c3e50; }
+        .latex-block { margin: 1em 0; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            Continuous Variables (Bivariate Analysis)
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            This module is designed to explore the relationship between <strong>two</strong> continuous variables. Use the sidebar panel to configure your inputs before navigating through the analysis tabs.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select Your Variables</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 5px;"><strong>Variable 1 (x):</strong> Select your independent or baseline continuous variable.</li>
+            <li><strong>Variable 2 (y):</strong> Select your dependent or secondary continuous variable to compare against 'x'.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Grouping Data</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 5px;">Check the <strong>Statistics by group?</strong> box if you want to partition your bivariate analysis by a specific categorical variable.</li>
+            <li style="margin-bottom: 5px;">Once checked, select your dividing category from the <em>group by</em> dropdown menu.</li>
+            <li><em>Note:</em> The grouping option is only available for visual summaries. It will automatically hide if you are viewing the Dependency and Correlation Study tab.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Navigate the Analysis Tabs</h3>
+        <ul style="margin-top: 5px;">
+            <li>Use the main panel tabs to switch between the two primary analysis modes:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Dependency and Correlation Study:</strong> Analyze the statistical strength and direction of the relationship between your two variables (e.g., Pearson, Spearman).</li>
+                    <li><strong>Graphic Summary:</strong> Visualize the relationship using customized scatterplots and trend lines.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <hr style="border: 0; height: 1px; background: #cccccc; margin: 20px 0;">
+        
+        <p style="text-align: center; color: #555555; font-size: 11pt; margin-bottom: 0;">
+            <em>Need to review this documentation again? Click the blue <strong>Help</strong> button in the sidebar at any time.</em>
+        </p>
+    
+    </div>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            User Guide: Dependency and Correlation Study
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Dependency and Correlation Study</strong> tab allows you to evaluate the statistical relationship and measure the strength of association between your two selected continuous variables.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select a Correlation Method</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">Use the <strong>Correlation method:</strong> dropdown menu to choose the mathematical approach for calculating the relationship.</li>
+            <li>Available options include:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Pearson:</strong> Best for evaluating linear relationships between normally distributed variables.</li>
+                    <li><strong>Spearman:</strong> A non-parametric rank correlation, useful for non-linear monotonic relationships or when outliers are present.</li>
+                    <li><strong>Kendall:</strong> Another non-parametric test, often preferred for smaller sample sizes or when data contains many tied ranks.</li>
+                    <li><strong>All:</strong> Computes and displays the results for all three methods simultaneously.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. View the Metrics</h3>
+        <ul style="margin-top: 5px;">
+            <li>Once a method is selected, the application will automatically calculate the correlation coefficients and related metrics.</li>
+            <li>The results are displayed instantly in the interactive data table directly below the dropdown menu, allowing you to easily read and export the data.</li>
+        </ul>
+    
+    </div>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            Graphic Summary (Bivariate Analysis)
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Graphic Summary</strong> tab in the bivariate module visualizes the relationship between your two selected continuous variables using an interactive <strong>Scatterplot</strong>.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Viewing the Scatterplot</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">Once you have selected <em>Variable 1 (x)</em> and <em>Variable 2 (y)</em> in the sidebar, the scatterplot will automatically render.</li>
+            <li>If you checked the <strong>Statistics by group?</strong> option in the sidebar, the points on the plot will be separated by color according to the categories in your grouping variable.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Customizing the Graph</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">Click the <strong>Customize graph</strong> button (marked with a fish icon) to open the styling panel.</li>
+            <li><strong>Styling Options:</strong>
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Aesthetics:</strong> Change the <em>Theme</em>, <em>Font</em>, and <em>Font Size</em>.</li>
+                    <li><strong>Point Appearance:</strong> Adjust the point <em>Size</em>, <em>Shape</em>, and <em>Alpha</em> (transparency).</li>
+                    <li><strong>Colors:</strong> If ungrouped, choose a single <em>Color</em>. If grouped, choose a color <em>Palette</em> to differentiate the categories.</li>
+                    <li><strong>Labels:</strong> Customize your axis titles using the <em>xlab</em> and <em>ylab</em> fields.</li>
+                </ul>
+            </li>
+            <li><strong>Reset:</strong> Click the yellow <em>Reset to Initial State</em> button to quickly undo all your aesthetic changes.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Exporting</h3>
+        <ul style="margin-top: 5px;">
+            <li>When you are satisfied with how your scatterplot looks, click the blue <strong>Download Graph</strong> button to save the image to your device.</li>
+        </ul>
+    
+    </div>
+</body>
+</html>
+

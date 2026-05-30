@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ayuda: Variables Cualitativas</title>
+    <!-- MathJax for LaTeX rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        h1 { color: #2c3e50; }
+        .latex-block { margin: 1em 0; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            Qualitative Variables
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            This module is designed for the descriptive analysis of categorical (non-numerical) data. Use the sidebar panel to select your variables before exploring the summaries in the main panel.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select Your Variable</h3>
+        <ul style="margin-top: 5px;">
+            <li>Use the <strong>Qualitative variable</strong> dropdown menu in the sidebar to choose the specific categorical variable you wish to analyze from your dataset.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Grouping Data (Optional)</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">If you want to compare your chosen variable across different sub-categories, check the <strong>Statistics by group?</strong> box.</li>
+            <li>Once checked, a new dropdown menu titled <em>Group by</em> will appear. You can select one or more categorical variables here to partition your data for comparison.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Navigate the Analysis Tabs</h3>
+        <ul style="margin-top: 5px;">
+            <li>After setting up your inputs in the sidebar, use the tabs in the main area to view the results:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Tabular Summary:</strong> Generate absolute and relative frequency tables to see how your categories are distributed.</li>
+                    <li><strong>Graphic Summaries:</strong> Visualize the distribution of your categories using appropriate charts (such as bar charts or pie charts).</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <hr style="border: 0; height: 1px; background: #cccccc; margin: 20px 0;">
+        
+        <p style="text-align: center; color: #555555; font-size: 11pt; margin-bottom: 0;">
+            <em>Need to review this documentation again? Click the blue <strong>Help</strong> button in the sidebar at any time.</em>
+        </p>
+    
+    </div>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            Tabular Summary (Qualitative)
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Tabular Summary</strong> tab generates interactive tables to help you understand the distribution and proportions of your categorical data. The type of table displayed depends on your sidebar settings.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Frequency Table (Ungrouped Data)</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 5px;">If you are analyzing a single variable without any grouping, the application will display a standard <strong>Frequency table</strong>.</li>
+            <li>This table provides a straightforward summary of counts (absolute frequency) and percentages (relative frequency) for each category within your selected variable.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Two-Way Table (Grouped Data)</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 5px;">If you checked the <strong>Statistics by group?</strong> option in the sidebar, the view will automatically change to a <strong>Two-way table</strong> (also known as a contingency table or cross-tabulation).</li>
+            <li>This allows you to examine the relationship between your primary qualitative variable and your selected grouping categories simultaneously.</li>
+        </ul>
+    
+    </div>
+    <div style="font-family: 'Palatino', serif; color: #333333; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fcfcfc;">
+    
+        <h2 style="color: #00008B; text-align: center; border-bottom: 2px solid #00008B; padding-bottom: 10px; margin-top: 0;">
+            Graphic Summary (Qualitative)
+        </h2>
+    
+        <p style="text-align: justify; font-size: 12pt;">
+            The <strong>Graphic Summary</strong> tab allows you to visualize the distribution of your categorical data. You can easily switch between different chart types and fully customize their appearance.
+        </p>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">1. Select Graph Type</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 5px;">Use the <strong>Select:</strong> dropdown menu to choose your preferred visualization: <em>Barplot</em> or <em>Pie</em> chart.</li>
+            <li>Toggle the <strong>Horizontal</strong> switch if you want to flip the orientation of your Barplot.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">2. Customize Your Graph</h3>
+        <ul style="margin-top: 5px;">
+            <li style="margin-bottom: 10px;">Click the <strong>Customize graph</strong> button (marked with a fish icon) to open the styling panel.</li>
+            <li><strong>Styling Options:</strong> Depending on the graph type and whether your data is grouped, you can adjust:
+                <ul style="margin-top: 5px; list-style-type: circle;">
+                    <li><strong>Aesthetics:</strong> Modify the <em>Theme</em>, <em>Font</em>, and <em>Font Size</em>.</li>
+                    <li><strong>Colors:</strong> For ungrouped barplots, pick specific fill and line colors. For grouped barplots or pie charts, select a color <em>Palette</em> to distinguish categories.</li>
+                    <li><strong>Labels:</strong> Rename your axis titles using the <em>xlab</em> and <em>ylab</em> fields.</li>
+                    <li><strong>Details:</strong> Fine-tune the line width, point angles, and alpha (transparency).</li>
+                </ul>
+            </li>
+            <li><strong>Reset:</strong> Click the yellow <em>Reset to Initial State</em> button to instantly clear your customizations and return to the default look.</li>
+        </ul>
+    
+        <h3 style="color: #00008B; margin-bottom: 5px;">3. Exporting</h3>
+        <ul style="margin-top: 5px;">
+            <li>Once your chart looks exactly how you want it, click the blue <strong>Download Graph</strong> button to save the image directly to your device for use in reports or presentations.</li>
+        </ul>
+    
+    </div>
+</body>
+</html>
+
